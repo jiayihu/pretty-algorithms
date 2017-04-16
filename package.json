@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^19.2.2",
+    "@types/lodash": "^4.14.62",
     "@types/node": "^7.0.12",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.9",
@@ -27,5 +28,8 @@
       "tsx",
       "js"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
