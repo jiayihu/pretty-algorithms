@@ -1,0 +1,45 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "arrow-parens": false,
+    "curly": false,
+    "object-literal-key-quotes": [
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "one-line": [
+      false
+    ],
+    "only-arrow-functions": [
+      false
+    ],
+    "member-access": false,
+    "member-ordering": [
+      false
+    ],
+    "no-console": [
+      false
+    ],
+    "no-string-literal": false,
+    "no-var-requires": false,
+    "ordered-imports": [
+      false
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-leading-underscore"
+    ]
+  }
+}
