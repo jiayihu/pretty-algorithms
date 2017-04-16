@@ -1,6 +1,6 @@
 # Pretty sort
 
-> Sorting-algorithms written pretty and easy to understand.
+Sorting-algorithms written pretty and easy to understand with modern Javascript.
 
 ## Note
 
@@ -22,7 +22,7 @@ npm install # or yarn install
 npm test # or yarn test
 ```
 
-Play around with the source code, the tests and learn the algorithms! You can also run thw following commands to put tests in watch mode and auto-run with changes. [Jest](http://facebook.github.io/jest/) CLI output is awesome!
+Play around with the source code, the tests and learn the algorithms! You can also run the following command to put tests in watch mode and auto-run with changes. [Jest](http://facebook.github.io/jest/) CLI output is awesome!
 
 ```bash
 npm run test -- --watch
