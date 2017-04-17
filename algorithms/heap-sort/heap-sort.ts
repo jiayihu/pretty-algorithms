@@ -1,14 +1,29 @@
 const rangeRight = require('lodash/rangeRight');
 import { swap } from '../utils';
 
+/**
+ * Return the index of the left child in the heap.
+ * @param index Index of the current node
+ */
 function left(index: number): number {
   return 2 * index + 1;
 }
 
+/**
+ * Return the index of the right child in the heap.
+ * @param index Index of the current node
+ */
 function right(index: number): number {
   return 2 * index + 2;
 }
 
+/**
+ * Place the element in the right position of the max-heap. It assumes child nodes
+ * are valid heaps.
+ * @param input Array rappresented by the heap  
+ * @param index Index of the element to place
+ * @param heapSize Size of the heap
+ */
 export function maxHeapify<T>(input: T[], index: number, heapSize: number): void {
   const leftChild = left(index);
   const rightChild = right(index);
@@ -28,6 +43,10 @@ export function maxHeapify<T>(input: T[], index: number, heapSize: number): void
   }
 }
 
+/**
+ * Build max-heap from input.
+ * @param input Array to build the max-heap from
+ */
 export function buildMaxHeap<T>(input: T[]): void {
   // All nodes from (input.length / 2) are leaves
   const firstLeaf = Math.floor(input.length / 2);

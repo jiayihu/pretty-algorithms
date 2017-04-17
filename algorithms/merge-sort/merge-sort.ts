@@ -30,7 +30,7 @@ function merge<T>(input: T[], start: number, mid: number, end: number) {
  * @param start Left side of the subarray
  * @param end Right side of the subarray, not included
  */
-export function mergeSort<T>(input: T[], start: number, end: number): T[] {
+export function mergeSort<T>(input: T[], start: number = 0, end: number = input.length): T[] {
   if (end - start <= 1) return [];
 
   const mid = Math.floor((start + end) / 2);
