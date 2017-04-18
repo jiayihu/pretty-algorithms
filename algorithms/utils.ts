@@ -1,4 +1,11 @@
 /**
+ * Move the item at given index to the right
+ */
+export function moveRight(input, index) {
+  input[index + 1] = input[index];
+}
+
+/**
  * Swap two items in an array
  * @param array Input array, whose elements are swapped
  * @param from From index

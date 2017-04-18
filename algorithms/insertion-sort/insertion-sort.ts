@@ -1,3 +1,5 @@
+import { moveRight } from '../utils';
+
 /**
  * Sort the array with insertion sort.
  * Time complexity: O(n^2).
@@ -8,7 +10,7 @@ export function insertionSort<T>(input: T[]): T[] {
     let position = index - 1;
 
     while (position > -1 && input[position] > pivot) {
-      input[position + 1] = input[position];
+      moveRight(input, position);
       position -= 1;
     }
 

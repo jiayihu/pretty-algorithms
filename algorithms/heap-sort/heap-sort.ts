@@ -17,6 +17,10 @@ export function right(index: number): number {
   return 2 * index + 2;
 }
 
+function isInHeap(index: number, heapSize: number): boolean {
+  return index < heapSize;
+}
+
 /**
  * Place the element in the right position of the max-heap. It assumes child nodes
  * are valid heaps.
@@ -29,11 +33,11 @@ export function maxHeapify<T>(input: T[], index: number, heapSize: number): T[] 
   const rightChild = right(index);
   let maxIndex = index;
 
-  if (leftChild < heapSize && input[leftChild] > input[index]) {
+  if (isInHeap(leftChild, heapSize) && input[leftChild] > input[index]) {
     maxIndex = leftChild;
   }
 
-  if (rightChild < heapSize && input[rightChild] > input[maxIndex]) {
+  if (isInHeap(rightChild, heapSize) && input[rightChild] > input[maxIndex]) {
     maxIndex = rightChild;
   }
 
