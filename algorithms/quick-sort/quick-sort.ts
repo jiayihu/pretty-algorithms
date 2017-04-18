@@ -1,4 +1,5 @@
 const range = require('lodash/range');
+const random = require('lodash/random');
 import { swap } from '../utils';
 
 /**
@@ -7,8 +8,11 @@ import { swap } from '../utils';
  * @param left The start of the subarray
  * @param right The end of the subarray
  */
-export function partition<T>(input: T[], left: number, right: number): number {
+export function partition<T>(input: T[], left: number, right: number, randomized: boolean): number {
+  if (randomized) swap(input, random(left, right), right);
+
   const pivot = input[right];
+
   let minEnd = left - 1;
 
   range(left, right).forEach(maxEnd => {
@@ -29,11 +33,12 @@ export function partition<T>(input: T[], left: number, right: number): number {
  * @param input The array which should be sorted
  * @param start The start of the subarray which should be handled
  * @param end The end of the subarray which should be handled
+ * @param randomized Run the randomized version of quick sort
  */
-export function quickSort<T>(input: T[], start: number = 0, end: number = input.length - 1): T[] {
+export function quickSort<T>(input: T[], start = 0, end = input.length - 1, randomized = false): T[] {
   if (start >= end) return input;
 
-  const mid = partition(input, start, end);
+  const mid = partition(input, start, end, randomized);
   quickSort(input, start, mid - 1);
   quickSort(input, mid + 1, end);
 
