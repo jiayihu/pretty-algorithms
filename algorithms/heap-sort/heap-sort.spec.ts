@@ -35,12 +35,4 @@ describe('Heap sort', function() {
 
     expect(result).toEqual([1, 2, 3, 4, 5, 6]);
   });
-
-  test('It should buildMaxHeap', function () {
-    expect(true).toBe(true);
-  });
-
-  test('It should maxHeapify', function () {
-    expect(true).toBe(true);
-  });
 });

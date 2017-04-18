@@ -8,8 +8,11 @@ The purpose of this repository is to show sorting algorithms written using decla
 
 If you need something absolutely performant in production try checking [felipernb/algorithms.js](https://github.com/felipernb/algorithms.js) with low-level optimisations.
 
+Check also [this article about pros and cons of common sorting algorithms](http://www.brucemerry.org.za/manual/algorithms/sorting.html).
+
 ## Content
 
+- [Counting sort](algorithms/counting-sort/counting-sort.ts)
 - [Heap sort](algorithms/heap-sort/heap-sort.ts)
 - [Insertion sort](algorithms/insertion-sort/insertion-sort.ts)
 - [Merge sort](algorithms/merge-sort/merge-sort.ts)

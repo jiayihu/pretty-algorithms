@@ -67,7 +67,7 @@ export function buildMaxHeap<T>(input: T[]): T[] {
 /**
  * Sort the input with heap sort.
  * Time complexity: O(n * lg(n)).
- * @param input The array which should besorted
+ * @param input The array which should bo sorted
  */
 export function heapSort<T>(input: T[]): T[] {
   buildMaxHeap(input);
