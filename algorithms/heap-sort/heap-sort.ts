@@ -5,7 +5,7 @@ import { swap } from '../utils';
  * Return the index of the left child in the heap.
  * @param index Index of the current node
  */
-function left(index: number): number {
+export function left(index: number): number {
   return 2 * index + 1;
 }
 
@@ -13,7 +13,7 @@ function left(index: number): number {
  * Return the index of the right child in the heap.
  * @param index Index of the current node
  */
-function right(index: number): number {
+export function right(index: number): number {
   return 2 * index + 2;
 }
 
@@ -24,7 +24,7 @@ function right(index: number): number {
  * @param index Index of the element to place
  * @param heapSize Size of the heap
  */
-export function maxHeapify<T>(input: T[], index: number, heapSize: number): void {
+export function maxHeapify<T>(input: T[], index: number, heapSize: number): T[] {
   const leftChild = left(index);
   const rightChild = right(index);
   let maxIndex = index;
@@ -41,19 +41,23 @@ export function maxHeapify<T>(input: T[], index: number, heapSize: number): void
     swap(input, index, maxIndex);
     maxHeapify(input, maxIndex, heapSize);
   }
+
+  return input;
 }
 
 /**
  * Build max-heap from input.
  * @param input Array to build the max-heap from
  */
-export function buildMaxHeap<T>(input: T[]): void {
-  // All nodes from (input.length / 2) are leaves
+export function buildMaxHeap<T>(input: T[]): T[] {
+  // All nodes from (input.length / 2) + 1 are leaves
   const firstLeaf = Math.floor(input.length / 2);
 
   rangeRight(firstLeaf).forEach(index => {
-    maxHeapify(input, index, input.length)
+    maxHeapify(input, index, input.length);
   });
+
+  return input;
 }
 
 /**

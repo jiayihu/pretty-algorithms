@@ -1,5 +1,5 @@
 /**
- * Swap two item arrays
+ * Swap two items in an array
  * @param array Input array, whose elements are swapped
  * @param from From index
  * @param to Destination index

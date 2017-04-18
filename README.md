@@ -10,8 +10,10 @@ If you need something absolutely performant in production try checking [felipern
 
 ## Content
 
+- [Heap sort](algorithms/heap-sort/heap-sort.ts)
 - [Insertion sort](algorithms/insertion-sort/insertion-sort.ts)
 - [Merge sort](algorithms/merge-sort/merge-sort.ts)
+- [Quick sort](algorithms/quick-sort/quick-sort.ts)
 
 ## Usage
 

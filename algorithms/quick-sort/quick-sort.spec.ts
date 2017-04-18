@@ -8,7 +8,7 @@ describe('Quick sort partition', function() {
     expect(pivotIndex).toBe(2);
   });
 
-  test('The smaller numbers should be at pivot left', function() {
+  test('Smaller numbers should be at pivot left', function() {
     const input = [5, 2, 4, 6, 1, 3];
     const pivot = last(input);
     const pivotIndex = partition(input, 0, input.length - 1);
@@ -16,7 +16,7 @@ describe('Quick sort partition', function() {
     smaller.forEach(value => expect(value).toBeLessThanOrEqual(pivot));
   });
 
-  test('The bigger numbers should be at pivot right', function() {
+  test('Bigger numbers should be at pivot right', function() {
     const input = [5, 2, 4, 6, 1, 3];
     const pivot = last(input);
     const pivotIndex = partition(input, 0, input.length - 1);

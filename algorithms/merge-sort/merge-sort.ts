@@ -2,13 +2,13 @@ const range = require('lodash/range');
 const head = require('lodash/head');
 
 /**
- * Devides and sort merges two subarrays of given array
+ * Divides and sort merges two subarrays of given array
  * @param input The array which subarrays should be sorted
  * @param start Start of the first array
  * @param mid End of first array, not included
  * @param end End of second array, not including
  */
-function merge<T>(input: T[], start: number, mid: number, end: number) {
+export function merge<T>(input: T[], start: number, mid: number, end: number) {
   const left = input.slice(start, mid);
   const right = input.slice(mid, end);
 
