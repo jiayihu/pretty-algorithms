@@ -5,7 +5,7 @@ import { moveRight } from '../utils';
  * Time complexity: O(n^2).
  * @param input The array which should be sorted
  */
-export function insertionSort<T>(input: T[]): T[] {
+export function insertionSort(input: number[]): number[] {
   input.forEach((pivot, pivotIndex) => {
     let compareIndex = pivotIndex - 1;
 

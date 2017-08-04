@@ -24,11 +24,11 @@ function isInHeap(index: number, heapSize: number): boolean {
 /**
  * Place the element in the right position of the max-heap. It assumes child nodes
  * are valid heaps.
- * @param input Array rappresented by the heap  
+ * @param input Array rappresented by the heap
  * @param index Index of the element to place
  * @param heapSize Size of the heap
  */
-export function maxHeapify<T>(input: T[], index: number, heapSize: number): T[] {
+export function maxHeapify(input: number[], index: number, heapSize: number): number[] {
   const leftChild = left(index);
   const rightChild = right(index);
   let maxIndex = index;
@@ -53,7 +53,7 @@ export function maxHeapify<T>(input: T[], index: number, heapSize: number): T[] 
  * Build max-heap from input.
  * @param input Array to build the max-heap from
  */
-export function buildMaxHeap<T>(input: T[]): T[] {
+export function buildMaxHeap(input: number[]): number[] {
   // All nodes from (input.length / 2) + 1 are leaves
   const firstLeaf = Math.floor(input.length / 2);
 
@@ -69,7 +69,7 @@ export function buildMaxHeap<T>(input: T[]): T[] {
  * Time complexity: O(n * lg(n)).
  * @param input The array which should bo sorted
  */
-export function heapSort<T>(input: T[]): T[] {
+export function heapSort(input: number[]): number[] {
   buildMaxHeap(input);
 
   rangeRight(input.length).forEach(index => {

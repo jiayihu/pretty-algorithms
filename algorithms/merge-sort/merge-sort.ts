@@ -8,7 +8,7 @@ import head from 'lodash/head';
  * @param mid End of first array, not included
  * @param end End of second array, not including
  */
-export function merge<T>(input: T[], start: number, mid: number, end: number) {
+export function merge(input: number[], start: number, mid: number, end: number) {
   // Make a copy of the two subarrays
   const left = input.slice(start, mid);
   const right = input.slice(mid, end);
@@ -31,7 +31,7 @@ export function merge<T>(input: T[], start: number, mid: number, end: number) {
  * @param start Left side of the subarray
  * @param end Right side of the subarray, not included
  */
-export function mergeSort<T>(input: T[], start = 0, end = input.length): T[] {
+export function mergeSort(input: number[], start = 0, end = input.length): number[] {
   if (end - start <= 1) return [];
 
   const mid = Math.floor((start + end) / 2);

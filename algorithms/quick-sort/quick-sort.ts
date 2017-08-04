@@ -8,7 +8,12 @@ import { swap } from '../utils';
  * @param left The start of the subarray
  * @param right The end of the subarray
  */
-export function partition<T>(input: T[], left: number, right: number, randomized: boolean): number {
+export function partition(
+  input: number[],
+  left: number,
+  right: number,
+  randomized: boolean,
+): number {
   if (randomized) swap(input, random(left, right), right);
 
   const pivot = input[right];
@@ -35,12 +40,12 @@ export function partition<T>(input: T[], left: number, right: number, randomized
  * @param end The end of the subarray which should be handled
  * @param randomized Run the randomized version of quick sort
  */
-export function quickSort<T>(
-  input: T[],
+export function quickSort(
+  input: number[],
   start = 0,
   end = input.length - 1,
-  randomized = false
-): T[] {
+  randomized = false,
+): number[] {
   if (start >= end) return input;
 
   const mid = partition(input, start, end, randomized);

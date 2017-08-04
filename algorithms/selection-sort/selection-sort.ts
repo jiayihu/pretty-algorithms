@@ -6,7 +6,7 @@ import { moveRight, swap } from '../utils';
  * Time complexity: O(n^2).
  * @param input The array which should be sorted
  */
-export function selectionSort<T>(input: T[]): T[] {
+export function selectionSort(input: number[]): number[] {
   // @NOTE: actually the last iteration can be avoided because it's already to greatest value
   range(0, input.length).forEach(pivotIndex => {
     let min = input[pivotIndex];

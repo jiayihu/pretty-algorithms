@@ -5,7 +5,7 @@
  * @param start Initial index
  * @param end Ending index
  */
-export function binarySearch<T>(input: T[], value: T, start: number, end: number): number {
+export function binarySearch(input: number[], value: number, start: number, end: number): number {
   if (start > end || value < input[start] || value > input[end]) return null;
 
   const mid = Math.floor((end + start) / 2);

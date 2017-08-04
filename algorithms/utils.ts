@@ -11,7 +11,7 @@ export function moveRight(input, index) {
  * @param from From index
  * @param to Destination index
  */
-export function swap<T>(input: T[], from: number, to: number): T[] {
+export function swap(input: number[], from: number, to: number): number[] {
   const temp = input[from];
   input[from] = input[to];
   input[to] = temp;

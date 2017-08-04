@@ -6,7 +6,7 @@
 import range from 'lodash/range';
 import head from 'lodash/head';
 
-function merge<T>(input: T[], start: number, mid: number, end: number): number {
+function merge(input: number[], start: number, mid: number, end: number): number {
   const left = input.slice(start, mid);
   const right = input.slice(mid, end);
 
@@ -33,10 +33,10 @@ function merge<T>(input: T[], start: number, mid: number, end: number): number {
  * @param start Left side of the subarray
  * @param end Right side of the subarray, not included
  */
-export function countInversions<T>(
-  input: T[],
+export function countInversions(
+  input: number[],
   start: number = 0,
-  end: number = input.length
+  end: number = input.length,
 ): number {
   if (end - start <= 1) return 0;
 
