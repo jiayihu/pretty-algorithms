@@ -6,15 +6,15 @@ import { moveRight } from '../utils';
  * @param input The array which should be sorted
  */
 export function insertionSort<T>(input: T[]): T[] {
-  input.forEach((pivot, index) => {
-    let position = index - 1;
+  input.forEach((pivot, pivotIndex) => {
+    let compareIndex = pivotIndex - 1;
 
-    while (position > -1 && input[position] > pivot) {
-      moveRight(input, position);
-      position -= 1;
+    while (compareIndex > -1 && input[compareIndex] > pivot) {
+      moveRight(input, compareIndex);
+      compareIndex -= 1;
     }
 
-    input[position + 1] = pivot;
+    input[compareIndex + 1] = pivot;
   });
 
   return input;
