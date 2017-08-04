@@ -1,6 +1,8 @@
 # Pretty sort
 
-Common useful algorithms written pretty and easy to understand with modern Javascript.
+Common useful algorithms written pretty and easy to understand with modern Javascript. All the algorithms are also tested using [Jest](http://facebook.github.io/jest/).
+
+![Jest](jest.png)
 
 ## Note
 
