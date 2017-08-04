@@ -1,4 +1,4 @@
-const rangeRight = require('lodash/rangeRight');
+import rangeRight from 'lodash/rangeRight';
 import { swap } from '../utils';
 
 /**
@@ -79,4 +79,3 @@ export function heapSort<T>(input: T[]): T[] {
 
   return input;
 }
-

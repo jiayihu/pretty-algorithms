@@ -1,3 +1,4 @@
+import range from 'lodash/range';
 import { moveRight, swap } from '../utils';
 
 /**
@@ -6,8 +7,9 @@ import { moveRight, swap } from '../utils';
  * @param input The array which should be sorted
  */
 export function selectionSort<T>(input: T[]): T[] {
-  input.forEach((pivot, pivotIndex) => {
-    let min = pivot;
+  // @NOTE: actually the last iteration can be avoided because it's already to greatest value
+  range(0, input.length).forEach(pivotIndex => {
+    let min = input[pivotIndex];
     let minIndex = pivotIndex;
 
     for (let i = pivotIndex + 1; i < input.length; i++) {

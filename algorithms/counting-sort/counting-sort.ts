@@ -1,6 +1,6 @@
-const forEachRight = require('lodash/forEachRight');
-const range = require('lodash/range');
-const rangeRight = require('lodash/rangeRight');
+import forEachRight from 'lodash/forEachRight';
+import range from 'lodash/range';
+import rangeRight from 'lodash/rangeRight';
 
 function increaseOfPrevious(index: number, array: number[]) {
   array[index] += array[index - 1];
@@ -17,11 +17,11 @@ export function countingSort(input: number[], max: number): number[] {
   const counter = new Array(max + 1);
   counter.fill(0);
 
-  input.forEach(value => counter[value] += 1);
+  input.forEach(value => (counter[value] += 1));
 
   range(1, max + 1).forEach(index => increaseOfPrevious(index, counter));
 
-  forEachRight(input, (value) => {
+  forEachRight(input, value => {
     counter[value] -= 1;
 
     const position = counter[value];

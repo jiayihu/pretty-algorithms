@@ -1,4 +1,4 @@
-const max = require('lodash/max');
+import max from 'lodash/max';
 import { countingSort } from './counting-sort';
 
 describe('Counting sort', function() {

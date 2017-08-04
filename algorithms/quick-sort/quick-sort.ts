@@ -1,5 +1,5 @@
-const range = require('lodash/range');
-const random = require('lodash/random');
+import range from 'lodash/range';
+import random from 'lodash/random';
 import { swap } from '../utils';
 
 /**
@@ -35,7 +35,12 @@ export function partition<T>(input: T[], left: number, right: number, randomized
  * @param end The end of the subarray which should be handled
  * @param randomized Run the randomized version of quick sort
  */
-export function quickSort<T>(input: T[], start = 0, end = input.length - 1, randomized = false): T[] {
+export function quickSort<T>(
+  input: T[],
+  start = 0,
+  end = input.length - 1,
+  randomized = false
+): T[] {
   if (start >= end) return input;
 
   const mid = partition(input, start, end, randomized);

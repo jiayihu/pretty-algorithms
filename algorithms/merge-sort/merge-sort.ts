@@ -1,5 +1,5 @@
-const range = require('lodash/range');
-const head = require('lodash/head');
+import range from 'lodash/range';
+import head from 'lodash/head';
 
 /**
  * Divides and sort merges two subarrays of given array
