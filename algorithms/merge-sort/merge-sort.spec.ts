@@ -1,7 +1,7 @@
 import { merge, mergeSort } from './merge-sort';
 
 describe('Merge', function() {
-  test('It should merge the two ordered sub-arrays with final result ordered', function () {
+  test('It should merge the two ordered sub-arrays with final result ordered', function() {
     const input = [4, 5, 6, 1, 2, 3];
     const result = merge(input, 0, 3, 6);
 
