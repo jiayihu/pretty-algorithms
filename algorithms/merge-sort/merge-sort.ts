@@ -9,6 +9,7 @@ import head from 'lodash/head';
  * @param end End of second array, not including
  */
 export function merge<T>(input: T[], start: number, mid: number, end: number) {
+  // Make a copy of the two subarrays
   const left = input.slice(start, mid);
   const right = input.slice(mid, end);
 

@@ -1,10 +1,10 @@
 # Pretty sort
 
-Sorting-algorithms written pretty and easy to understand with modern Javascript.
+Common useful algorithms written pretty and easy to understand with modern Javascript.
 
 ## Note
 
-The purpose of this repository is to show sorting algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production.
+The purpose of this repository is to show algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production.
 
 If you need something absolutely performant in production try checking [felipernb/algorithms.js](https://github.com/felipernb/algorithms.js) with low-level optimisations.
 
