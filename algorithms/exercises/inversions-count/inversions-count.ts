@@ -1,6 +1,8 @@
 /**
  * Given array A[1... n], for every i < j, find all inversion pairs such that A[i] > A[j].
- * Solution must have complexity O(n*lg(n))
+ * Solution must have complexity O(n*lg(n)).
+ *
+ * Tip: modify merge-sort
  */
 
 import range from 'lodash/range';
