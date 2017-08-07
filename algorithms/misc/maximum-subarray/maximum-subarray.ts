@@ -1,4 +1,4 @@
-import { range, rangeRight } from '../utils';
+import { range, rangeRight } from '../../utils';
 
 export function maxCrossSubarray(
   input: number[],
@@ -36,6 +36,15 @@ export function maxCrossSubarray(
   };
 }
 
+/**
+ * Returns the contiguous subarray within an array of numbers which has the largest
+ * sum.
+ * Time complexity: O(n*lg(n)).
+ * @NOTE: there is also solution with O(n) time complexity.
+ * @param input The array which should be sorted
+ * @param start Left side of the subarray
+ * @param end Right side of the subarray, not included
+ */
 export function maxSubarray(
   input: number[],
   start: number,

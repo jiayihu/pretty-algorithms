@@ -1,5 +1,5 @@
 import rangeRight from 'lodash/rangeRight';
-import { swap } from '../utils';
+import { swap } from '../../utils';
 
 /**
  * Return the index of the left child in the heap.

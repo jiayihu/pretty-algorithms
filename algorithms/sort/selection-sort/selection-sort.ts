@@ -1,5 +1,5 @@
 import range from 'lodash/range';
-import { moveRight, swap } from '../utils';
+import { moveRight, swap } from '../../utils';
 
 /**
  * Sort the array with selection sort.

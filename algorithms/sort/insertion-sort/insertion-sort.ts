@@ -1,4 +1,4 @@
-import { moveRight } from '../utils';
+import { moveRight } from '../../utils';
 
 /**
  * Sort the array with insertion sort.

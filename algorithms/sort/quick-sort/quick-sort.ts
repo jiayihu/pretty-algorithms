@@ -1,6 +1,6 @@
 import range from 'lodash/range';
 import random from 'lodash/random';
-import { swap } from '../utils';
+import { swap } from '../../utils';
 
 /**
  * Partition the subarray for the quicksort
@@ -12,7 +12,7 @@ export function partition(
   input: number[],
   left: number,
   right: number,
-  randomized: boolean,
+  randomized: boolean
 ): number {
   if (randomized) swap(input, random(left, right), right);
 
@@ -44,7 +44,7 @@ export function quickSort(
   input: number[],
   start = 0,
   end = input.length - 1,
-  randomized = false,
+  randomized = false
 ): number[] {
   if (start >= end) return input;
 

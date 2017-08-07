@@ -1,5 +1,6 @@
 /**
  * Return the index of the value in the input
+ * Time complexity: O(lg(n)).
  * @param input An ordered array where to find the value
  * @param value Value to find
  * @param start Initial index

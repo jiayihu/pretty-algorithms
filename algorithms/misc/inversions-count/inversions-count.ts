@@ -31,6 +31,7 @@ function merge(input: number[], start: number, mid: number, end: number): number
 
 /**
  * Count the number of inversions
+ * Time complexity: O(n*lg(n)).
  * @param input The array which should be sorted
  * @param start Left side of the subarray
  * @param end Right side of the subarray, not included
@@ -38,7 +39,7 @@ function merge(input: number[], start: number, mid: number, end: number): number
 export function countInversions(
   input: number[],
   start: number = 0,
-  end: number = input.length,
+  end: number = input.length
 ): number {
   if (end - start <= 1) return 0;
 
