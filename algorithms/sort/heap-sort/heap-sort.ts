@@ -1,4 +1,4 @@
-import rangeRight from 'lodash/rangeRight';
+import { reverseRange } from '../../utils';
 import { swap } from '../../utils';
 
 /**
@@ -14,7 +14,7 @@ export function left(index: number): number {
  * @param index Index of the current node
  */
 export function right(index: number): number {
-  return 2 * index + 2;
+  return 2 * (index + 1);
 }
 
 function isInHeap(index: number, heapSize: number): boolean {
@@ -43,6 +43,7 @@ export function maxHeapify(input: number[], index: number, heapSize: number): nu
 
   if (maxIndex !== index) {
     swap(input, index, maxIndex);
+    // Repeat max-heap check for the subtree
     maxHeapify(input, maxIndex, heapSize);
   }
 
@@ -55,9 +56,9 @@ export function maxHeapify(input: number[], index: number, heapSize: number): nu
  */
 export function buildMaxHeap(input: number[]): number[] {
   // All nodes from (input.length / 2) + 1 are leaves
-  const firstLeaf = Math.floor(input.length / 2);
+  const firstLeaf = Math.floor((input.length - 1) / 2);
 
-  rangeRight(firstLeaf).forEach(index => {
+  reverseRange(firstLeaf).forEach(index => {
     maxHeapify(input, index, input.length);
   });
 
@@ -72,7 +73,7 @@ export function buildMaxHeap(input: number[]): number[] {
 export function heapSort(input: number[]): number[] {
   buildMaxHeap(input);
 
-  rangeRight(input.length).forEach(index => {
+  reverseRange(input.length - 1).forEach(index => {
     swap(input, 0, index);
     maxHeapify(input, 0, index);
   });

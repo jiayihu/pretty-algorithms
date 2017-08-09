@@ -34,3 +34,8 @@ Play around with the source code, the tests and learn the algorithms! You can al
 ```bash
 npm run test -- --watch
 ```
+
+### TODO
+
+- Add O(n) implementation of `maximum-subarray`
+- Add a real-world usage example of every algorithm

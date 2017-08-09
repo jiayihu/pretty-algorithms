@@ -18,8 +18,8 @@ export function range(from: number, to: number): number[] {
 /**
  * Creates an array of numbers in descending order from start to end, both included.
  */
-export function rangeRight(from: number, to: number): number[] {
-  return baseRangeRight(from, to + 1);
+export function reverseRange(from: number, to: number = 0): number[] {
+  return baseRangeRight(to, from + 1);
 }
 
 /**

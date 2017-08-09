@@ -1,4 +1,4 @@
-import { range, rangeRight } from '../../utils';
+import { range, reverseRange } from '../../utils';
 
 export function maxCrossSubarray(
   input: number[],
@@ -10,7 +10,7 @@ export function maxCrossSubarray(
   let leftMaxSum = -Infinity;
   let sum = 0;
 
-  rangeRight(start, mid).forEach(index => {
+  reverseRange(mid, start).forEach(index => {
     sum += input[index];
     if (sum > leftMaxSum) {
       leftMaxSum = sum;
@@ -43,7 +43,7 @@ export function maxCrossSubarray(
  * @NOTE: there is also solution with O(n) time complexity.
  * @param input The array which should be sorted
  * @param start Left side of the subarray
- * @param end Right side of the subarray, not included
+ * @param end Right side of the subarray
  */
 export function maxSubarray(
   input: number[],

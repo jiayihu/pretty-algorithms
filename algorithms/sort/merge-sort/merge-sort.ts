@@ -1,5 +1,5 @@
-import range from 'lodash/range';
 import head from 'lodash/head';
+import { range } from '../../utils';
 
 /**
  * Divides and sort merges two subarrays of given array
@@ -16,7 +16,7 @@ export function merge(input: number[], start: number, mid: number, end: number) 
   left[left.length] = Infinity as any;
   right[right.length] = Infinity as any;
 
-  range(start, end).forEach(index => {
+  range(start, end - 1).forEach(index => {
     if (head(left) <= head(right)) input[index] = left.shift();
     else input[index] = right.shift();
   });

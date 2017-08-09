@@ -5,7 +5,7 @@
  * Tip: modify merge-sort
  */
 
-import range from 'lodash/range';
+import { range } from '../../utils';
 import head from 'lodash/head';
 
 function merge(input: number[], start: number, mid: number, end: number): number {
@@ -17,7 +17,7 @@ function merge(input: number[], start: number, mid: number, end: number): number
 
   let inversionCount = 0;
 
-  range(start, end).forEach(index => {
+  range(start, end - 1).forEach(index => {
     if (head(left) > head(right)) {
       inversionCount += right.length - 1; // Do not include Infinity in the count
       input[index] = left.shift();

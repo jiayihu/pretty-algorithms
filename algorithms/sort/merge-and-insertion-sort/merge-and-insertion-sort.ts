@@ -1,5 +1,3 @@
-import range from 'lodash/range';
-import head from 'lodash/head';
 import { insertionSort } from '../insertion-sort/insertion-sort';
 import { merge } from '../merge-sort/merge-sort';
 
@@ -27,7 +25,7 @@ export function mergeAndInsertionSort(
   input: number[],
   start = 0,
   end = input.length,
-  threshold = 10,
+  threshold = 10
 ): number[] {
   if (end - start <= 1) return [];
 

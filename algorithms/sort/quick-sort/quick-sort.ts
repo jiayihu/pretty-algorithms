@@ -1,5 +1,5 @@
-import range from 'lodash/range';
 import random from 'lodash/random';
+import { range } from '../../utils';
 import { swap } from '../../utils';
 
 /**
@@ -20,7 +20,7 @@ export function partition(
 
   let minEnd = left - 1;
 
-  range(left, right).forEach(maxEnd => {
+  range(left, right - 1).forEach(maxEnd => {
     if (input[maxEnd] <= pivot) {
       minEnd += 1;
       swap(input, minEnd, maxEnd);
