@@ -2,6 +2,14 @@ import { reverseRange } from '../../utils';
 import { swap } from '../../utils';
 
 /**
+ * Return the index of the parent in the heap.
+ * @param index Index of the current node
+ */
+export function parent(index: number): number {
+  return Math.floor((index - 1) / 2);
+}
+
+/**
  * Return the index of the left child in the heap.
  * @param index Index of the current node
  */
@@ -73,9 +81,9 @@ export function buildMaxHeap(input: number[]): number[] {
 export function heapSort(input: number[]): number[] {
   buildMaxHeap(input);
 
-  reverseRange(input.length - 1).forEach(index => {
-    swap(input, 0, index);
-    maxHeapify(input, 0, index);
+  reverseRange(input.length - 1).forEach(heapEnd => {
+    swap(input, 0, heapEnd);
+    maxHeapify(input, 0, heapEnd);
   });
 
   return input;

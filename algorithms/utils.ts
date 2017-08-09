@@ -22,6 +22,11 @@ export function reverseRange(from: number, to: number = 0): number[] {
   return baseRangeRight(to, from + 1);
 }
 
+export function setHead(input: number[], value: number): number[] {
+  input[0] = value;
+  return input;
+}
+
 /**
  * Swap two items in an array
  * @param array Input array, whose elements are swapped
