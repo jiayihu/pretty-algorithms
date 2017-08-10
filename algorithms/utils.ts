@@ -1,6 +1,10 @@
 import baseRange from 'lodash/range';
 import baseRangeRight from 'lodash/rangeRight';
 
+export function increaseOfPrevious(array: number[], index: number) {
+  array[index] += array[index - 1];
+}
+
 /**
  * Move the item at given index to the right
  */

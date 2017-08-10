@@ -7,7 +7,7 @@ import { moveRight, range, swap } from '../../utils';
  */
 export function selectionSort(input: number[]): number[] {
   // The last iteration can be avoided because it will already be the greatest value
-  range(0, input.length - 1).forEach(pivotIndex => {
+  range(0, input.length - 2).forEach(pivotIndex => {
     let min = input[pivotIndex];
     let minIndex = pivotIndex;
 
