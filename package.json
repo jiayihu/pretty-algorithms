@@ -27,7 +27,8 @@
       "ts",
       "tsx",
       "js"
-    ]
+    ],
+    "snapshotSerializers": ["./algorithms/jest.js"]
   },
   "dependencies": {
     "lodash": "^4.17.4"
