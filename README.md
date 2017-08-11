@@ -1,8 +1,8 @@
-# Pretty sort
+# Pretty algorithms
 
-Common useful algorithms written pretty and easy to understand with modern Javascript. All the algorithms are also tested using [Jest](http://facebook.github.io/jest/).
+Common useful algorithms written in modern, pretty and easy-to-understand Javascript. All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom nice-to-read diffs for data structures.
 
-![Jest](jest.png)
+![Jest](assets/jest-1.png)
 
 ## Note
 
@@ -14,11 +14,26 @@ Check also [this article about pros and cons of common sorting algorithms](http:
 
 ## Content
 
-- [Counting sort](algorithms/counting-sort/counting-sort.ts)
-- [Heap sort](algorithms/heap-sort/heap-sort.ts)
-- [Insertion sort](algorithms/insertion-sort/insertion-sort.ts)
-- [Merge sort](algorithms/merge-sort/merge-sort.ts)
-- [Quick sort](algorithms/quick-sort/quick-sort.ts)
+### Miscellanous 
+
+- [Inversion count](algorithms/misc/inversion-count/inversion-count.ts)
+- [Maximum subarray](algorithms/misc/maximum-subarray/maximum-subarray.ts)
+- [Priority queue](algorithms/misc/priority-queue/priority-queue.ts)
+
+### Search
+
+- [Binary search](algorithms/search/binary-search/binary-search.ts)
+- [Binary search tree](algorithms/search/binary-search-tree/binary-search-tree.ts)
+
+### Sort
+
+- [Counting sort](algorithms/sort/counting-sort/counting-sort.ts)
+- [Heap sort](algorithms/sort/heap-sort/heap-sort.ts)
+- [Insertion sort](algorithms/sort/insertion-sort/insertion-sort.ts)
+- [Merge sort](algorithms/sort/merge-sort/merge-sort.ts)
+- [Merge and insertion sort](algorithms/sort/merge-and-insertion-sort/merge-and-insertion-sort.ts)
+- [Quick sort](algorithms/sort/quick-sort/quick-sort.ts)
+- [Selection sort](algorithms/sort/selection-sort/selection-sort.ts)
 
 ## Usage
 
@@ -35,7 +50,10 @@ Play around with the source code, the tests and learn the algorithms! You can al
 npm run test -- --watch
 ```
 
-### TODO
+![Jest](assets/jest.png)
+
+## TODO
 
 - Add O(n) implementation of `maximum-subarray`
+- Add implementation of `Red-Black Tree`
 - Add a real-world usage example of every algorithm
