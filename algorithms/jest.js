@@ -1,6 +1,6 @@
 /**
  * Convert a Binary Tree to ASCII
- * Source: https://gist.github.com/khanov/4f1472b5ae001da817db
+ * Original source in Swift: https://gist.github.com/khanov/4f1472b5ae001da817db
  */
 function buildTreeString(node, prefix = '', isTail) {
   let result = '';
@@ -27,7 +27,7 @@ module.exports = {
 
   test(val) {
     return (
-      val && val.hasOwnProperty('key') && val.hasOwnProperty('left') && val.hasOwnProperty('key')
+      val && val.hasOwnProperty('key') && val.hasOwnProperty('left') && val.hasOwnProperty('right')
     );
   },
 };
