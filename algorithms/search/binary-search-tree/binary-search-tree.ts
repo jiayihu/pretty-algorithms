@@ -144,7 +144,7 @@ export function insert(tree: Tree, leaf: Node) {
  * @NOTE: it does not update the childs nor does it check if the BST is still
  * valid.
  * @param tree BST root node
- * @param oldNode Node to be replaced
+ * @param oldNode Node to be replaced. It cannot be null.
  * @param newNode Replacement node
  */
 export function transplant(tree: Tree, oldNode: Node, newNode: Node) {
@@ -156,24 +156,26 @@ export function transplant(tree: Tree, oldNode: Node, newNode: Node) {
 }
 
 /**
- * Remove a node from a BST. 
+ * Remove a node from a BST.
  * @param tree BST root node
- * @param node Node to be removed
+ * @param removed Node to be removed
  */
-export function remove(tree: Tree, node: Node) {
-  if (node.left === null) transplant(tree, node, node.right);
-  else if (node.right === null) transplant(tree, node, node.left);
+export function remove(tree: Tree, removed: Node) {
+  if (removed.left === null) transplant(tree, removed, removed.right);
+  else if (removed.right === null) transplant(tree, removed, removed.left);
   else {
-    const minRight = minimum(node.right);
+    const minRight = minimum(removed.right);
 
-    if (minRight.parent !== node) {
+    if (minRight.parent !== removed) {
       transplant(tree, minRight, minRight.right);
-      minRight.right = node.right;
+      // Attach the removed node right subtree to minRight
+      minRight.right = removed.right;
       minRight.right.parent = minRight;
     }
 
-    transplant(tree, node, minRight);
-    minRight.left = node.left;
+    transplant(tree, removed, minRight);
+    // Attach the removed node left subtree to minRight
+    minRight.left = removed.left;
     minRight.left.parent = minRight;
   }
 }
