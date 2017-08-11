@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BST insertion 1`] = `
+│   ┌── 18
+│   │   │   ┌── 17
+│   │   └── 15
+│   │       └── 13
+└── 12
+    │   ┌── 9
+    │   │   └── 9
+    └── 5
+        └── 2
+
+`;

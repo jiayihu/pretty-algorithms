@@ -3,6 +3,9 @@
   "rules": {
     "arrow-parens": false,
     "curly": false,
+    "interface-name": [
+      false
+    ],
     "object-literal-key-quotes": [
       false
     ],
