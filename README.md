@@ -1,6 +1,8 @@
 # Pretty algorithms
 
-Common useful algorithms written in modern, pretty and easy-to-understand Javascript. All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom nice-to-read diffs for data structures.
+Common useful algorithms written in modern, pretty and easy-to-understand Javascript. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
+
+All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom nice-to-read diffs for data structures.
 
 ![Jest](assets/jest-1.png)
 
@@ -19,6 +21,7 @@ Check also [this article about pros and cons of common sorting algorithms](http:
 - [Inversion count](algorithms/misc/inversions-count/inversions-count.ts)
 - [Maximum subarray](algorithms/misc/maximum-subarray/maximum-subarray.ts)
 - [Priority queue](algorithms/misc/priority-queue/priority-queue.ts)
+- [Rod cutting](algorithms/misc/rod-cutting/rod-cutting.ts)
 
 ### Search
 
