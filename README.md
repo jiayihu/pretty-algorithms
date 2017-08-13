@@ -57,6 +57,5 @@ npm run test -- --watch
 
 ## TODO
 
-- Add O(n) implementation of `maximum-subarray`
-- Add implementation of `Red-Black Tree`
 - Add a real-world usage example of every algorithm
+- Add benchmarks

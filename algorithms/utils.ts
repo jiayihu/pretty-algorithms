@@ -1,6 +1,12 @@
 import baseRange from 'lodash/range';
 import baseRangeRight from 'lodash/rangeRight';
 
+export function fill<T>(array: T[], valueFn: (index: number) => any): T[] {
+  for (let i = 0; i < array.length; i++) array[i] = valueFn(i);
+
+  return array;
+}
+
 export function increaseOfPrevious(array: number[], index: number) {
   array[index] += array[index - 1];
 }
