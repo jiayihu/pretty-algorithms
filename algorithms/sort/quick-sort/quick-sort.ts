@@ -18,18 +18,18 @@ export function partition(
 
   const pivot = input[right];
 
-  let minEnd = left - 1;
+  let minEdge = left - 1;
 
-  range(left, right - 1).forEach(maxEnd => {
-    if (input[maxEnd] <= pivot) {
-      minEnd += 1;
-      swap(input, minEnd, maxEnd);
+  range(left, right - 1).forEach(current => {
+    if (input[current] <= pivot) {
+      minEdge += 1;
+      swap(input, minEdge, current);
     }
   });
 
-  swap(input, minEnd + 1, right);
+  swap(input, minEdge + 1, right);
 
-  return minEnd + 1;
+  return minEdge + 1;
 }
 
 /**

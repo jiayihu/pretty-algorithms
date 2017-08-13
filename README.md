@@ -16,7 +16,7 @@ Check also [this article about pros and cons of common sorting algorithms](http:
 
 ### Miscellanous 
 
-- [Inversion count](algorithms/misc/inversion-count/inversion-count.ts)
+- [Inversion count](algorithms/misc/inversions-count/inversions-count.ts)
 - [Maximum subarray](algorithms/misc/maximum-subarray/maximum-subarray.ts)
 - [Priority queue](algorithms/misc/priority-queue/priority-queue.ts)
 
