@@ -28,7 +28,7 @@
       "tsx",
       "js"
     ],
-    "snapshotSerializers": ["./algorithms/jest.js"]
+    "snapshotSerializers": ["./tests/btree-serializer.js", "./tests/matrix-serializer.js"]
   },
   "dependencies": {
     "lodash": "^4.17.4"
