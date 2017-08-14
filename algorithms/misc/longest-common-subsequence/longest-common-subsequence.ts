@@ -8,22 +8,17 @@ import { fill, range } from '../../utils';
  * not required to occupy consecutive positions within the original sequences.
  */
 
-export type Directions = Array<Array<'←' | '↑' | '↖'>>;
-
-export interface BestResults {
-  lengths: number[][];
-  directions: Directions;
-}
-
-export function lcsLengths(seqA: string, seqB: string): BestResults {
+/**
+ * Return the table of common subsequences lengths
+ * @param seqA First sequence
+ * @param seqB Second sequence
+ */
+export function lcsLengths(seqA: string, seqB: string): number[][] {
   const lengthA = seqA.length;
   const lengthB = seqB.length;
 
   const lengths: number[][] = new Array(lengthA + 1);
   fill(lengths, () => new Array(lengthB + 1));
-
-  const directions: Directions = new Array(lengthA + 1);
-  fill(directions, () => new Array(lengthB + 1));
 
   range(0, lengthA).forEach(i => (lengths[i][0] = 0));
   range(0, lengthB).forEach(i => (lengths[0][i] = 0));
@@ -35,35 +30,41 @@ export function lcsLengths(seqA: string, seqB: string): BestResults {
 
       if (charA === charB) {
         lengths[indexA + 1][indexB + 1] = lengths[indexA][indexB] + 1;
-        directions[indexA + 1][indexB + 1] = '↖';
       } else if (lengths[indexA][indexB + 1] >= lengths[indexA + 1][indexB]) {
         lengths[indexA + 1][indexB + 1] = lengths[indexA][indexB + 1];
-        directions[indexA + 1][indexB + 1] = '↑';
       } else {
         lengths[indexA + 1][indexB + 1] = lengths[indexA + 1][indexB];
-        directions[indexA + 1][indexB + 1] = '←';
       }
     });
   });
 
-  return {
-    lengths,
-    directions,
-  };
+  return lengths;
 }
 
-function walkLCS(directions: Directions, seqA: string, indexA: number, indexB: number): string {
+/**
+ * Return the LCS of two sequences using the table of lengths
+ * @param lengths The table of common subsequences lengths returned by `lcsLengths`
+ * @param seqA First sequence
+ * @param seqB Second sequence
+ * @param indexA seqA index in the reverse LCS walk
+ * @param indexB seqB index in the reverse LCS walk
+ */
+function walkLCS(
+  lengths: number[][],
+  seqA: string,
+  seqB: string,
+  indexA: number,
+  indexB: number
+): string {
   if (indexA === 0 || indexB === 0) return '';
 
-  const direction = directions[indexA][indexB];
-
-  if (direction === '↖') {
-    const subLCS = walkLCS(directions, seqA, indexA - 1, indexB - 1);
+  if (seqA[indexA - 1] === seqB[indexB - 1]) {
+    const subLCS = walkLCS(lengths, seqA, seqB, indexA - 1, indexB - 1);
     return subLCS + seqA[indexA - 1];
-  } else if (direction === '←') {
-    return walkLCS(directions, seqA, indexA, indexB - 1);
+  } else if (lengths[indexA - 1][indexB] >= lengths[indexA][indexB - 1]) {
+    return walkLCS(lengths, seqA, seqB, indexA - 1, indexB);
   } else {
-    return walkLCS(directions, seqA, indexA - 1, indexB);
+    return walkLCS(lengths, seqA, seqB, indexA, indexB - 1);
   }
 }
 
@@ -73,8 +74,8 @@ function walkLCS(directions: Directions, seqA: string, indexA: number, indexB: n
  * @param seqB Second sequence
  */
 export function findLCS(seqA: string, seqB: string): string {
-  const { directions } = lcsLengths(seqA, seqB);
-  const lcs = walkLCS(directions, seqA, seqA.length, seqB.length);
+  const lengths = lcsLengths(seqA, seqB);
+  const lcs = walkLCS(lengths, seqA, seqB, seqA.length, seqB.length);
 
   return lcs;
 }

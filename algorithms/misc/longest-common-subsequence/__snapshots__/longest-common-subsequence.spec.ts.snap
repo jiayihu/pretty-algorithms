@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LCS directions 1`] = `
-     0 1 2 3 4 5 6 
-       B D C A B A 
-     ______________
-0  | ∅ ∅ ∅ ∅ ∅ ∅ ∅ 
-1 A| ∅ ↑ ↑ ↑ ↖ ← ↖ 
-2 B| ∅ ↖ ← ← ↑ ↖ ← 
-3 C| ∅ ↑ ↑ ↖ ← ↑ ↑ 
-4 B| ∅ ↖ ↑ ↑ ↑ ↖ ← 
-5 D| ∅ ↑ ↖ ↑ ↑ ↑ ↑ 
-6 A| ∅ ↑ ↑ ↑ ↖ ↑ ↖ 
-7 B| ∅ ↖ ↑ ↑ ↑ ↖ ↑ 
-
-`;
-
 exports[`LCS subsequences lengths 1`] = `
      0 1 2 3 4 5 6 
        B D C A B A 
