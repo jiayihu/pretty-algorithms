@@ -6,13 +6,15 @@ import { fill, range } from '../../utils';
  *
  * It differs from problems of finding common substrings since subsequences are
  * not required to occupy consecutive positions within the original sequences.
- * 
+ *
  * The solution uses dynamic-programming.
  * @url https://en.wikipedia.org/wiki/Dynamic_programming
  */
 
 /**
- * Return the table of common subsequences lengths
+ * Return the table of common subsequences lengths. See the snapshot in
+ * `__snapshots` to have a visual rappresentation.
+ * Time complexity: O(seqA.length * seqB.length)
  * @param seqA First sequence
  * @param seqB Second sequence
  */
@@ -33,10 +35,10 @@ export function lcsLengths(seqA: string, seqB: string): number[][] {
 
       if (charA === charB) {
         lengths[indexA + 1][indexB + 1] = lengths[indexA][indexB] + 1;
-      } else if (lengths[indexA][indexB + 1] >= lengths[indexA + 1][indexB]) {
-        lengths[indexA + 1][indexB + 1] = lengths[indexA][indexB + 1];
       } else {
-        lengths[indexA + 1][indexB + 1] = lengths[indexA + 1][indexB];
+        const subSeqALength = lengths[indexA][indexB + 1];
+        const subSeqBLength = lengths[indexA + 1][indexB];
+        lengths[indexA + 1][indexB + 1] = Math.max(subSeqALength, subSeqBLength);
       }
     });
   });
@@ -46,6 +48,7 @@ export function lcsLengths(seqA: string, seqB: string): number[][] {
 
 /**
  * Return the LCS of two sequences using the table of lengths
+ * Time complexity: O(seqA.length + seqB.length)
  * @param lengths The table of common subsequences lengths returned by `lcsLengths`
  * @param seqA First sequence
  * @param seqB Second sequence
@@ -73,6 +76,7 @@ function walkLCS(
 
 /**
  * Return the longest common subsequence (LCS)
+ * Time complexity: O(seqA.length * seqB.length)
  * @param seqA First sequence
  * @param seqB Second sequence
  */

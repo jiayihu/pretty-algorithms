@@ -16,6 +16,7 @@ If you need something absolutely performant in production try checking [felipern
 
 ### Miscellaneous 
 
+- [Activity selection](algorithms/misc/activity-selection/activity-selection.ts)
 - [Inversion count](algorithms/misc/inversions-count/inversions-count.ts)
 - [Longest common subsequence](algorithms/misc/longest-common-subsequence/longest-common-subsequence.ts)
 - [Maximum subarray](algorithms/misc/maximum-subarray/maximum-subarray.ts)
@@ -57,6 +58,12 @@ npm run test -- --watch
 ## Real-world usage
 
 Some real-world usage of the algorithms to show when they can be applied.
+
+### Activity selection 📆
+
+> The activity selection problem is the selection of non-conflicting activities to perform within a given time frame, given a set of activities each marked by a start time (s[i]) and finish time (f[i]).
+
+A classic application of this problem is in scheduling a room for multiple competing events, each having its own time requirements (start and end time), and many more arise within the framework of operations research. [Source](https://en.wikipedia.org/wiki/Activity_selection_problem)
 
 ### Longest common subsequence 📐
 
