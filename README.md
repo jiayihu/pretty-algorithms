@@ -1,6 +1,6 @@
 # Pretty algorithms
 
-Common useful algorithms written in modern, pretty and easy-to-understand Javascript with [real-world usage](#real-world-algorithms) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
+Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-algorithms) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
 
 All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom nice-to-read diffs for data structures.
 
@@ -8,7 +8,7 @@ All the algorithms are also tested using [Jest](http://facebook.github.io/jest/)
 
 ## Note
 
-The purpose of this repository is to show algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production.
+The purpose of this repository is to show algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production. Clarity is favored over performance.
 
 If you need something absolutely performant in production try checking [felipernb/algorithms.js](https://github.com/felipernb/algorithms.js) with low-level optimisations.
 
