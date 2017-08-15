@@ -6,6 +6,9 @@ import { fill, range } from '../../utils';
  *
  * It differs from problems of finding common substrings since subsequences are
  * not required to occupy consecutive positions within the original sequences.
+ * 
+ * The solution uses dynamic-programming.
+ * @url https://en.wikipedia.org/wiki/Dynamic_programming
  */
 
 /**

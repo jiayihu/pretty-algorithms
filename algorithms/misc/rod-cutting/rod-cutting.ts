@@ -6,6 +6,9 @@ import { range } from '../../utils';
  *
  * Find best set of cuts to get maximum price. Each cut is integer length and can
  * use any number of cuts, from 0 to n−1.
+ * 
+ * The solution uses dynamic-programming.
+ * @url https://en.wikipedia.org/wiki/Dynamic_programming
  */
 
 export interface BestResults {
