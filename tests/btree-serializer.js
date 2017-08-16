@@ -5,14 +5,14 @@
 function buildTreeString(node, prefix = '', isTail) {
   let result = '';
 
-  if (node.right !== null) {
+  if (node.right) {
     const newPrefix = prefix + (isTail ? '│   ' : '    ');
     result += buildTreeString(node.right, newPrefix, false);
   }
 
   result += prefix + (isTail ? '└── ' : '┌── ') + node.key + '\n';
 
-  if (node.left !== null) {
+  if (node.left) {
     const newPrefix = prefix + (isTail ? '    ' : '│   ');
     result += buildTreeString(node.left, newPrefix, true);
   }

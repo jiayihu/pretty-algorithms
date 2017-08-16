@@ -32,6 +32,24 @@ export function reverseRange(from: number, to: number = 0): number[] {
   return baseRangeRight(to, from + 1);
 }
 
+export interface Node {
+  left: Node;
+  right: Node;
+}
+
+/**
+ * Convert a tree to serializable Binary Tree for Jest snapshots
+ */
+export function toSerializableTree(root: Node, nodeConverter: (node: any) => Node): Node {
+  if (!root) return;
+
+  toSerializableTree(root.left, nodeConverter);
+  Object.assign(root, nodeConverter(root));
+  toSerializableTree(root.right, nodeConverter);
+
+  return root;
+}
+
 export function setHead(input: number[], value: number): number[] {
   input[0] = value;
   return input;

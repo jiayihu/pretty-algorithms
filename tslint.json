@@ -38,10 +38,6 @@
       "functions": "never",
       "typeLiterals": "ignore"
     }, "singleline": "never" }],
-    "variable-name": [
-      true,
-      "check-format",
-      "allow-leading-underscore"
-    ]
+    "variable-name": [false]
   }
 }
