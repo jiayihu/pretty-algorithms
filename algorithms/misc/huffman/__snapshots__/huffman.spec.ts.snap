@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Huffman coding tree 1`] = `
+│           ┌── d:16
+│       ┌── 30
+│       │   │   ┌── f:8
+│       │   └── 14
+│       │       └── e:6
+│   ┌── 55
+│   │   │   ┌── b:13
+│   │   └── 25
+│   │       └── c:12
+└── 100
+    └── a:45
+
+`;

@@ -28,9 +28,13 @@
       "tsx",
       "js"
     ],
-    "snapshotSerializers": ["./tests/btree-serializer.js", "./tests/matrix-serializer.js"]
+    "snapshotSerializers": [
+      "./tests/btree-serializer.js",
+      "./tests/matrix-serializer.js"
+    ]
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "min-heap": "^0.2.3"
   }
 }

@@ -2,7 +2,7 @@
 
 Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-algorithms) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
 
-All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom nice-to-read diffs for data structures.
+All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom beautiful [snapshots](https://facebook.github.io/jest/docs/snapshot-testing.html).
 
 ![Jest](assets/jest-1.png)
 
@@ -17,6 +17,7 @@ If you need something absolutely performant in production try checking [felipern
 ### Miscellaneous 
 
 - [Activity selection](algorithms/misc/activity-selection/activity-selection.ts)
+- [Huffman coding](algorithms/misc/huffman/huffman.ts)
 - [Inversion count](algorithms/misc/inversions-count/inversions-count.ts)
 - [Longest common subsequence](algorithms/misc/longest-common-subsequence/longest-common-subsequence.ts)
 - [Maximum subarray](algorithms/misc/maximum-subarray/maximum-subarray.ts)
@@ -64,6 +65,12 @@ Some real-world usage of the algorithms to show when they can be applied.
 > The activity selection problem is the selection of non-conflicting activities to perform within a given time frame, given a set of activities each marked by a start time (s[i]) and finish time (f[i]).
 
 A classic application of this problem is in scheduling a room for multiple competing events, each having its own time requirements (start and end time), and many more arise within the framework of operations research. [Source](https://en.wikipedia.org/wiki/Activity_selection_problem)
+
+### Huffman coding
+
+> A Huffman code is a particular type of optimal prefix code that is commonly used for lossless data compression.
+
+The `Huffman coding` is often used as a "back-end" to other compression methods. DEFLATE (PKZIP's algorithm) and multimedia codecs such as JPEG and MP3 have a front-end model and quantization followed by the use of prefix codes. [Source](https://en.wikipedia.org/wiki/Huffman_coding#Applications)
 
 ### Longest common subsequence 📐
 
