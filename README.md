@@ -1,6 +1,6 @@
 # Pretty algorithms
 
-Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-algorithms) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
+Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-usage) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
 
 All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom beautiful [snapshots](https://facebook.github.io/jest/docs/snapshot-testing.html).
 
