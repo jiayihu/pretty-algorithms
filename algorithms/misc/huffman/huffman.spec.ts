@@ -8,8 +8,8 @@ describe('huffman', () => {
       { char: 'b', frequency: 13 },
       { char: 'c', frequency: 12 },
       { char: 'd', frequency: 16 },
-      { char: 'e', frequency: 6 },
-      { char: 'f', frequency: 8 },
+      { char: 'e', frequency: 9 },
+      { char: 'f', frequency: 5 },
     ];
     const tree = huffman(frequences);
 

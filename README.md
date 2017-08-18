@@ -66,7 +66,7 @@ Some real-world usage of the algorithms to show when they can be applied.
 
 A classic application of this problem is in scheduling a room for multiple competing events, each having its own time requirements (start and end time), and many more arise within the framework of operations research. [Source](https://en.wikipedia.org/wiki/Activity_selection_problem)
 
-### Huffman coding
+### Huffman coding 🔡
 
 > A Huffman code is a particular type of optimal prefix code that is commonly used for lossless data compression.
 
