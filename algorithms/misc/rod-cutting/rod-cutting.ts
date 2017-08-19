@@ -6,8 +6,9 @@ import { range } from '../../utils';
  *
  * Find best set of cuts to get maximum price. Each cut is integer length and can
  * use any number of cuts, from 0 to n−1.
- * 
- * The solution uses dynamic-programming.
+ *
+ * The solution uses dynamic-programming and both strategies (top-down & bottom-up)
+ * are provided.
  * @url https://en.wikipedia.org/wiki/Dynamic_programming
  */
 
@@ -114,7 +115,7 @@ export function bottomUpCutRod(prices: number[], length: number): BestResults {
  * recursive.
  * @param prices List of prices for each rod length
  * @param length Length of the full rod
- * @param strategy Whether to use 'bottomUp' or 'topDown' strategy. Usually the 
+ * @param strategy Whether to use 'bottomUp' or 'topDown' strategy. Usually the
  * former is better.
  */
 export function cutRod(

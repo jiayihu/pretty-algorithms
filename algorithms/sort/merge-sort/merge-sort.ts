@@ -2,7 +2,8 @@ import head from 'lodash/head';
 import { range } from '../../utils';
 
 /**
- * Divides and sort merges two subarrays of given array
+ * Divide and sort merges two subarrays of given array
+ * Time complexity: O(n)
  * @param input The array which subarrays should be sorted
  * @param start Start of the first array
  * @param mid End of first array, not included

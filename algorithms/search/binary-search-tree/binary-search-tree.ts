@@ -13,6 +13,9 @@ export interface Tree {
   root: Node;
 }
 
+/**
+ * Create a tree node. Used to build a tree in tests.
+ */
 export function createNode(key: number, left: Node = null, right: Node = null): Node {
   const node = {
     key,
@@ -55,6 +58,7 @@ export function search(node: Node, key: number): Node {
 
 /**
  * Return the minimum key of the BST
+ * Time complexity: O(lg(n))
  * @param node BST root node
  */
 export function minimum(node: Node): Node {
@@ -68,6 +72,7 @@ export function minimum(node: Node): Node {
 
 /**
  * Return the maximum key of the BST
+ * Time complexity: O(lg(n))
  * @param node BST root node
  */
 export function maximum(node: Node): Node {
@@ -81,6 +86,7 @@ export function maximum(node: Node): Node {
 
 /**
  * Return the successor node in a in-order walk
+ * Time complexity: O(lg(n))
  * @param node BST root node
  */
 export function successor(node: Node): Node {
@@ -98,6 +104,7 @@ export function successor(node: Node): Node {
 
 /**
  * Return the predessor node in a in-order walk
+ * Time complexity: O(lg(n))
  * @param node BST root node
  */
 export function predecessor(node: Node): Node {
@@ -115,6 +122,7 @@ export function predecessor(node: Node): Node {
 
 /**
  * Insert a leaf node in a BST
+ * Time complexity: O(lg(n))
  * @param tree BST tree
  * @param leaf New leaf node to add
  */
@@ -143,6 +151,7 @@ export function insert(tree: Tree, leaf: Node) {
  * Replace a node with a new one in a BST
  * @NOTE: it does not update the childs nor does it check if the BST is still
  * valid.
+ * Time complexity: O(1)
  * @param tree BST root node
  * @param oldNode Node to be replaced. It cannot be null.
  * @param newNode Replacement node
@@ -157,6 +166,7 @@ export function transplant(tree: Tree, oldNode: Node, newNode: Node) {
 
 /**
  * Remove a node from a BST.
+ * Time complexity: O(lg(n))
  * @param tree BST root node
  * @param removed Node to be removed
  */

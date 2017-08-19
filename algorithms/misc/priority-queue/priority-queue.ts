@@ -10,6 +10,7 @@ import { setHead, swap } from '../../utils';
 
 /**
  * Return the maximum priority of the queue
+ * Time complexity: O(1)
  * @param queue Max-heap queue
  */
 export function maximum(queue: number[]): number {
@@ -18,6 +19,7 @@ export function maximum(queue: number[]): number {
 
 /**
  * Extract and return the maximum priority of the queue
+ * Time complexity: O(lg(n))
  * @param queue Max-heap queue
  */
 export function extractMax(queue: number[]): number {
@@ -32,6 +34,7 @@ export function extractMax(queue: number[]): number {
 
 /**
  * Return whether the parent follows the max-heap rule
+ * Time complexity: O(1)
  */
 function isParentInvalid(queue: number[], index: number): boolean {
   return queue[parent(index)] < queue[index];
@@ -39,6 +42,7 @@ function isParentInvalid(queue: number[], index: number): boolean {
 
 /**
  * Increase the priority of an item in the queue
+ * Time complexity: O(lg(n))
  * @param queue Max-heap queue
  * @param index Index of the priority to increase
  * @param increase Increase amount
@@ -58,6 +62,7 @@ export function increasePriority(queue: number[], index: number, increase: numbe
 
 /**
  * Add a new priority in the queue
+ * Time complexity: O(lg(n))
  * @param queue Max-heap queue
  * @param value New priority to add
  */

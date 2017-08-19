@@ -8,7 +8,7 @@ All the algorithms are also tested using [Jest](http://facebook.github.io/jest/)
 
 ## Note
 
-The purpose of this repository is to show algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production. Clarity is favored over performance.
+The purpose of this repository is to show algorithms written using declarative and intuitive code as much as possible. It's not meant to be used as production. Clarity and simplicity is favored over performance.
 
 If you need something absolutely performant in production try checking [felipernb/algorithms.js](https://github.com/felipernb/algorithms.js) with low-level optimisations.
 

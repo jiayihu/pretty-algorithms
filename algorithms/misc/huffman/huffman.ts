@@ -7,7 +7,8 @@ export interface Frequency {
 }
 
 /**
- * Return a Huffman Tree for the prefix codes
+ * Return a Huffman Tree for the prefix codes. See the snapshot in `__snapshots`
+ * to have a visual rappresentation.
  * @url https://en.wikipedia.org/wiki/Huffman_coding
  * 
  * Time complexity: O(n*lg(n))

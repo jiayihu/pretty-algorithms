@@ -3,6 +3,7 @@ import { swap } from '../../utils';
 
 /**
  * Return the index of the parent in the heap.
+ * Time complexity: O(1)
  * @param index Index of the current node
  */
 export function parent(index: number): number {
@@ -11,6 +12,7 @@ export function parent(index: number): number {
 
 /**
  * Return the index of the left child in the heap.
+ * Time complexity: O(1)
  * @param index Index of the current node
  */
 export function left(index: number): number {
@@ -19,6 +21,7 @@ export function left(index: number): number {
 
 /**
  * Return the index of the right child in the heap.
+ * Time complexity: O(1)
  * @param index Index of the current node
  */
 export function right(index: number): number {
@@ -32,6 +35,7 @@ function isInHeap(index: number, heapSize: number): boolean {
 /**
  * Place the element in the right position of the max-heap. It assumes child nodes
  * are valid heaps.
+ * Time complexity: O(lg(n))
  * @param input Array rappresented by the heap
  * @param index Index of the element to place
  * @param heapSize Size of the heap
@@ -60,6 +64,7 @@ export function maxHeapify(input: number[], index: number, heapSize: number): nu
 
 /**
  * Build max-heap from input.
+ * Time complexity: O(n)
  * @param input Array to build the max-heap from
  */
 export function buildMaxHeap(input: number[]): number[] {

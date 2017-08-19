@@ -4,6 +4,7 @@ import { swap } from '../../utils';
 
 /**
  * Partition the subarray for the quicksort
+ * Time complexity: O(n)
  * @param input The array which subarrays should be sorted
  * @param left The start of the subarray
  * @param right The end of the subarray

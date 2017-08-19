@@ -8,6 +8,15 @@
 import { range } from '../../utils';
 import head from 'lodash/head';
 
+/**
+ * Divide and sort merges two subarrays of given array, like in merge-sort, but
+ * count also the number of inversions in the merged array during the process.
+ * Time complexity: O(n)
+ * @param input The array which subarrays should be sorted
+ * @param start Start of the first array
+ * @param mid End of first array, not included
+ * @param end End of second array, not including
+ */
 function merge(input: number[], start: number, mid: number, end: number): number {
   const left = input.slice(start, mid);
   const right = input.slice(mid, end);

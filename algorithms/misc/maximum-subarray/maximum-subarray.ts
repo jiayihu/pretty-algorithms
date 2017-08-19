@@ -1,5 +1,13 @@
 import { range, reverseRange } from '../../utils';
 
+/**
+ * Find the best maximum subarray crossing the mid
+ * Time complexity: O(n)
+ * @param input The input array
+ * @param start Start of the first array
+ * @param mid End of first array
+ * @param end End of second array
+ */
 export function maxCrossSubarray(
   input: number[],
   start: number,
@@ -41,7 +49,7 @@ export function maxCrossSubarray(
  * sum.
  * Time complexity: O(n*lg(n)).
  * @NOTE: there is also solution with O(n) time complexity.
- * @param input The array which should be sorted
+ * @param input The input array
  * @param start Left side of the subarray
  * @param end Right side of the subarray
  */
