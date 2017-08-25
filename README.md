@@ -1,6 +1,6 @@
 # Pretty algorithms
 
-[![npm](https://img.shields.io/npm/v/pretty-algorithms.svg)](https://www.npmjs.com/package/pretty-algorithms) [![travis](https://travis-ci.org/jiayihu/pretty-algorithms.svg?branch=master)](https://travis-ci.org/jiayihu/pretty-algorithms)
+[![travis](https://travis-ci.org/jiayihu/pretty-algorithms.svg?branch=master)](https://travis-ci.org/jiayihu/pretty-algorithms)
 
 Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-usage) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
 
