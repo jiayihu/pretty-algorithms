@@ -2,7 +2,7 @@
 
 [![travis](https://travis-ci.org/jiayihu/pretty-algorithms.svg?branch=master)](https://travis-ci.org/jiayihu/pretty-algorithms)
 
-Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-usage) examples. Typescript has been used only for type checking and better auto-documentation, code is in pure ES6.
+Common useful algorithms written in modern, pretty and easy-to-understand Javascript along with [real-world usage](#real-world-usage) examples. Implementations are in standard ES6 Javascript with the addition of Typescript type annotations for better clarity.
 
 All the algorithms are also tested using [Jest](http://facebook.github.io/jest/) with the help of custom beautiful [snapshots](https://facebook.github.io/jest/docs/snapshot-testing.html).
 
