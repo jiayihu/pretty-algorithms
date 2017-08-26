@@ -19,6 +19,7 @@ If you need something absolutely performant in production try checking [felipern
 ### Miscellaneous 
 
 - [Activity selection](algorithms/misc/activity-selection/activity-selection.ts)
+- [Coins change making](algorithms/misc/change-making/change-making.ts)
 - [Huffman coding](algorithms/misc/huffman/huffman.ts)
 - [Inversion count](algorithms/misc/inversions-count/inversions-count.ts)
 - [Longest common subsequence](algorithms/misc/longest-common-subsequence/longest-common-subsequence.ts)
@@ -68,6 +69,15 @@ Some real-world usage of the algorithms to show when they can be applied.
 
 A classic application of this problem is in scheduling a room for multiple competing events, each having its own time requirements (start and end time), and many more arise within the framework of operations research. [Source](https://en.wikipedia.org/wiki/Activity_selection_problem)
 
+### Change making 💰
+
+> The change-making problem addresses the question of finding the minimum number of coins (of certain denominations) that add up to a given amount of money.
+
+The change-making problem is a [knapsack type problem](https://en.wikipedia.org/wiki/Knapsack_problem), and has applications wider than just currency.
+It can be used whenever there is the need to calculate the minimum set of items to add up to a value.
+
+An application of change-making problem can be found in computing the ways one can make a *nine dart finish* in a game of darts. [Source](https://en.wikipedia.org/wiki/Change-making_problem#Non-currency_examples)
+
 ### Huffman coding 🔡
 
 > A Huffman code is a particular type of optimal prefix code that is commonly used for lossless data compression.
@@ -103,7 +113,7 @@ This algorithm also has been applied to radio telescope images acquired for the 
 A `priority queue` can be used for Bandwidth management, Discrete event simulation, Dijkstra's algorithm and so on. Open the
 [source](https://en.wikipedia.org/wiki/Priority_queue#Applications) for more details.
 
-### Rod cutting 💰
+### Rod cutting 💸
 
 > Find the best way to cut a rod of length `n`, assuming that each length has a price. Find best set of cuts to get maximum price.
 
