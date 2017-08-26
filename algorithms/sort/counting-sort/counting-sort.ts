@@ -4,7 +4,7 @@ import { increaseOfPrevious, range } from '../../utils';
 /**
  * Sort the input with counting sort.
  * Time complexity: O(n).
- * @param input The array which should bo sorted
+ * @param input The array which should be sorted
  * @param max The max number between the values
  */
 export function countingSort(input: number[], max: number): number[] {
